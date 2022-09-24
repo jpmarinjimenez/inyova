@@ -1,11 +1,61 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header> -->
+<ion-menu contentId="main-content"> </ion-menu>
 
-<ion-content>
-  <ion-button [routerLink]="['/personal-details']" expand="block">
-    Open account
-  </ion-button>
-</ion-content>
+<div class="ion-page" id="main-content">
+    <ion-header>
+        <ion-toolbar>
+            <a [routerLink]="['/']">
+                <img
+                    src="/assets/logo.jpeg"
+                    alt="Logo Inyova"
+                    class="logo-inyova"
+                />
+            </a>
+            <ion-buttons slot="end">
+                <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="ion-padding inyova-background"> </ion-content>
+
+    <ion-footer class="ion-no-border">
+        <ion-toolbar>
+            <ion-item lines="none" slot="start">
+                <ion-icon
+                    name="shield-checkmark"
+                    color="success"
+                    slot="start"
+                ></ion-icon>
+                <ion-label>
+                    Inyova guarantees highest investment standards.<br />
+                    <a>Learn more.</a>
+                </ion-label>
+            </ion-item>
+
+            <ion-buttons slot="end">
+                <ion-button color="dark" fill="outline" class="footer-btn">
+                    Book consultation
+                </ion-button>
+
+                <ion-button
+                    [routerLink]="['/personal-details']"
+                    color="primary"
+                    fill="solid"
+                    class="footer-btn"
+                >
+                    Open account
+                </ion-button>
+
+                <ion-button
+                    shape="round"
+                    fill="solid"
+                    color="success"
+                    class="footer-btn"
+                >
+                    <ion-icon name="chatbubble-outline"></ion-icon>
+                    Chat
+                </ion-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-footer>
+</div>

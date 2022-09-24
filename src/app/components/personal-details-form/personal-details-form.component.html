@@ -1,66 +1,100 @@
-<ion-list>
-  <ion-list-header>
-    <ion-label>
-      <h1>Personal details</h1>
-    </ion-label>
-  </ion-list-header>
+<!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> -->
+<form>
+    <div class="inputs-container">
+        <ion-radio-group value="male">
+            <ion-label class="ion-padding label-text">Gender</ion-label>
+            <ion-row>
+                <ion-col size="6">
+                    <ion-item lines="none">
+                        <ion-label class="label-text">Male</ion-label>
+                        <ion-radio
+                            slot="start"
+                            value="male"
+                            mode="md"
+                        ></ion-radio>
+                    </ion-item>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-item lines="none">
+                        <ion-label class="label-text">Female</ion-label>
+                        <ion-radio
+                            slot="start"
+                            value="female"
+                            mode="md"
+                        ></ion-radio>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </ion-radio-group>
 
-  <ion-radio-group value="male">
-    <ion-row>
-      <ion-col size="12">
-        <ion-label class="ion-padding">Gender</ion-label>
-      </ion-col>
-      <ion-col sizeXs="6" size="4" sizeMd="3" sizeLg="2" sizeXl="2">
-        <ion-item lines="none">
-          <ion-label class="label-text">Male</ion-label>
-          <ion-radio slot="start" value="male" mode="md"></ion-radio>
+        <ion-item lines="none" class="mb-25">
+            <ion-label position="stacked">First name</ion-label>
+            <ion-input
+                type="text"
+                placeholder="First name (as shown in passport/ID)"
+                class="border-bottom"
+            ></ion-input>
         </ion-item>
-      </ion-col>
 
-      <ion-col sizeXs="6" sizeSm="4" sizeMd="3" sizeLg="2" sizeXl="2">
-        <ion-item lines="none">
-          <ion-label class="label-text">Female</ion-label>
-          <ion-radio slot="start" value="female" mode="md"></ion-radio>
+        <ion-item lines="none" class="mb-25">
+            <ion-label position="stacked">Last name</ion-label>
+            <ion-input
+                type="text"
+                placeholder="Last name (as shown in passport/ID)"
+                class="border-bottom"
+            ></ion-input>
         </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-radio-group>
 
-  <ion-item>
-    <ion-label position="stacked">First name</ion-label>
-    <ion-input
-      type="text"
-      placeholder="First name (as shown in passport/ID)"
-    ></ion-input>
-  </ion-item>
+        <ion-item lines="none" class="mb-25">
+            <ion-label position="stacked">Date of birth</ion-label>
+            <ion-row class="ion-justify-content-start">
+                <ion-col size="3">
+                    <ion-input
+                        type="text"
+                        placeholder="Day"
+                        class="border-bottom"
+                    ></ion-input>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-input
+                        type="text"
+                        placeholder="Month"
+                        class="border-bottom"
+                    ></ion-input>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-input
+                        type="text"
+                        placeholder="year"
+                        class="border-bottom"
+                    ></ion-input>
+                </ion-col>
+            </ion-row>
+        </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">Last name</ion-label>
-    <ion-input
-      type="text"
-      placeholder="Last name (as shown in passport/ID)"
-    ></ion-input>
-  </ion-item>
+        <ion-item lines="none">
+            <ion-label position="stacked">Nationality</ion-label>
+            <ion-input
+                type="text"
+                placeholder="Nationality"
+                class="border-bottom"
+            ></ion-input>
+        </ion-item>
+    </div>
 
-  <ion-item>
-    <ion-label position="stacked">Date of birth</ion-label>
-    <ion-row class="ion-justify-content-start">
-      <ion-col size="3">
-        <ion-input type="text" placeholder="Day"></ion-input>
-      </ion-col>
-      <ion-col size="3">
-        <ion-input type="text" placeholder="Month"></ion-input>
-      </ion-col>
-      <ion-col size="3">
-        <ion-input type="text" placeholder="year"></ion-input>
-      </ion-col>
-    </ion-row>
-  </ion-item>
+    <ion-button expand="full" color="dark" size="large" class="mb-25">
+        Continue
+    </ion-button>
 
-  <ion-item>
-    <ion-label position="stacked">Nationality</ion-label>
-    <ion-input type="text" placeholder="Nationality"></ion-input>
-  </ion-item>
-</ion-list>
-
-<ion-button expand="full" color="dark" size="large">Continue</ion-button>
+    <ion-item lines="none">
+        <ion-icon
+            name="shield-checkmark"
+            color="success"
+            slot="start"
+        ></ion-icon>
+        <ion-label>
+            Inyova guarantees highest investment standards.<br />
+            <a>Learn more.</a>
+        </ion-label>
+    </ion-item>
+</form>

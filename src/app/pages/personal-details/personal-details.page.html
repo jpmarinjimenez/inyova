@@ -1,3 +1,28 @@
-<ion-content>
-  <app-personal-details-form></app-personal-details-form>
-</ion-content>
+<ion-menu contentId="main-content"> </ion-menu>
+
+<div class="ion-page" id="main-content">
+    <ion-header>
+        <ion-toolbar>
+            <a [routerLink]="['/']">
+                <img
+                    src="/assets/logo.jpeg"
+                    alt="Logo Inyova"
+                    class="logo-inyova"
+                />
+            </a>
+            <ion-buttons slot="end">
+                <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="ion-padding inyova-background">
+        <ion-row class="ion-justify-content-center">
+            <ion-col sizeXs="12" sizeSm="10" sizeMd="5" sizeLg="3">
+                <h1>Personal details</h1>
+
+                <app-personal-details-form></app-personal-details-form>
+            </ion-col>
+        </ion-row>
+    </ion-content>
+</div>
