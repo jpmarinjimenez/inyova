@@ -2,7 +2,7 @@ import * as PersonalDetailsActions from './personal-details.actions';
 import { PersonalDetails } from '../../../interfaces/interfaces';
 
 const initialState: PersonalDetails = {
-    gender: 'Male',
+    gender: 'male',
     firstName: '',
     lastName: '',
     dob: null,

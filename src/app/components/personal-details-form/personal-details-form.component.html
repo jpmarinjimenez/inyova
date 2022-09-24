@@ -1,6 +1,6 @@
 <form [formGroup]="personalDetailsForm" (ngSubmit)="onSubmit()">
     <div class="inputs-container">
-        <ion-radio-group value="male">
+        <ion-radio-group formControlName="gender">
             <ion-label class="ion-padding label-text" color="dark"
                 >Gender</ion-label
             >
@@ -10,9 +10,9 @@
                         <ion-label class="label-text">Male</ion-label>
                         <ion-radio
                             slot="start"
-                            value="male"
                             mode="md"
                             color="dark"
+                            value="male"
                         ></ion-radio>
                     </ion-item>
                 </ion-col>
@@ -21,9 +21,9 @@
                         <ion-label class="label-text">Female</ion-label>
                         <ion-radio
                             slot="start"
-                            value="female"
                             mode="md"
                             color="dark"
+                            value="female"
                         ></ion-radio>
                     </ion-item>
                 </ion-col>

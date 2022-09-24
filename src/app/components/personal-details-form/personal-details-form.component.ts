@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
@@ -18,7 +19,8 @@ export class PersonalDetailsFormComponent implements OnInit {
 
     constructor(
         private toastController: ToastController,
-        private store: Store<{ personalDetails: PersonalDetails }>
+        private store: Store<{ personalDetails: PersonalDetails }>,
+        private router: Router
     ) {}
 
     ngOnInit() {
@@ -55,7 +57,7 @@ export class PersonalDetailsFormComponent implements OnInit {
     }
 
     onSubmit() {
-        console.log(this.personalDetailsForm);
+        console.log(this.personalDetailsForm.value);
 
         if (this.personalDetailsForm.status === 'INVALID') {
             this.presentToast();
@@ -67,6 +69,8 @@ export class PersonalDetailsFormComponent implements OnInit {
                 this.personalDetailsForm.value
             )
         );
+
+        this.router.navigate(['/']);
     }
 
     async presentToast() {
