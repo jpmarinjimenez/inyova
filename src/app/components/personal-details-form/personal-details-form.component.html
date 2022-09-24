@@ -1,5 +1,4 @@
-<!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> -->
-<form>
+<form [formGroup]="personalDetailsForm" (ngSubmit)="onSubmit()">
     <div class="inputs-container">
         <ion-radio-group value="male">
             <ion-label class="ion-padding label-text">Gender</ion-label>
@@ -31,6 +30,7 @@
             <ion-label position="stacked">First name</ion-label>
             <ion-input
                 type="text"
+                formControlName="firstName"
                 placeholder="First name (as shown in passport/ID)"
                 class="border-bottom"
             ></ion-input>
@@ -40,6 +40,7 @@
             <ion-label position="stacked">Last name</ion-label>
             <ion-input
                 type="text"
+                formControlName="lastName"
                 placeholder="Last name (as shown in passport/ID)"
                 class="border-bottom"
             ></ion-input>
@@ -51,6 +52,7 @@
                 <ion-col size="3">
                     <ion-input
                         type="text"
+                        formControlName="dob"
                         placeholder="Day"
                         class="border-bottom"
                     ></ion-input>
@@ -58,6 +60,7 @@
                 <ion-col size="3">
                     <ion-input
                         type="text"
+                        formControlName="mob"
                         placeholder="Month"
                         class="border-bottom"
                     ></ion-input>
@@ -65,6 +68,7 @@
                 <ion-col size="3">
                     <ion-input
                         type="text"
+                        formControlName="yob"
                         placeholder="year"
                         class="border-bottom"
                     ></ion-input>
@@ -76,6 +80,7 @@
             <ion-label position="stacked">Nationality</ion-label>
             <ion-input
                 type="text"
+                formControlName="nationality"
                 placeholder="Nationality"
                 class="border-bottom"
             ></ion-input>
