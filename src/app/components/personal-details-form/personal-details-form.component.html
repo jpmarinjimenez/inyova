@@ -1,7 +1,9 @@
 <form [formGroup]="personalDetailsForm" (ngSubmit)="onSubmit()">
     <div class="inputs-container">
         <ion-radio-group value="male">
-            <ion-label class="ion-padding label-text">Gender</ion-label>
+            <ion-label class="ion-padding label-text" color="dark"
+                >Gender</ion-label
+            >
             <ion-row>
                 <ion-col size="6">
                     <ion-item lines="none">
@@ -10,6 +12,7 @@
                             slot="start"
                             value="male"
                             mode="md"
+                            color="dark"
                         ></ion-radio>
                     </ion-item>
                 </ion-col>
@@ -20,6 +23,7 @@
                             slot="start"
                             value="female"
                             mode="md"
+                            color="dark"
                         ></ion-radio>
                     </ion-item>
                 </ion-col>
@@ -27,7 +31,7 @@
         </ion-radio-group>
 
         <ion-item lines="none" class="mb-25">
-            <ion-label position="stacked">First name</ion-label>
+            <ion-label position="stacked" color="dark">First name</ion-label>
             <ion-input
                 type="text"
                 formControlName="firstName"
@@ -37,7 +41,7 @@
         </ion-item>
 
         <ion-item lines="none" class="mb-25">
-            <ion-label position="stacked">Last name</ion-label>
+            <ion-label position="stacked" color="dark">Last name</ion-label>
             <ion-input
                 type="text"
                 formControlName="lastName"
@@ -47,37 +51,43 @@
         </ion-item>
 
         <ion-item lines="none" class="mb-25">
-            <ion-label position="stacked">Date of birth</ion-label>
+            <ion-label position="stacked" color="dark">Date of birth</ion-label>
             <ion-row class="ion-justify-content-start">
-                <ion-col size="3">
+                <ion-col size="4">
                     <ion-input
-                        type="text"
+                        type="number"
                         formControlName="dob"
                         placeholder="Day"
                         class="border-bottom"
+                        min="1"
+                        max="31"
                     ></ion-input>
                 </ion-col>
-                <ion-col size="3">
+                <ion-col size="4">
                     <ion-input
-                        type="text"
+                        type="number"
                         formControlName="mob"
                         placeholder="Month"
                         class="border-bottom"
+                        min="1"
+                        max="12"
                     ></ion-input>
                 </ion-col>
-                <ion-col size="3">
+                <ion-col size="4">
                     <ion-input
-                        type="text"
+                        type="number"
                         formControlName="yob"
                         placeholder="year"
                         class="border-bottom"
+                        min="1900"
+                        [max]="currentYear"
                     ></ion-input>
                 </ion-col>
             </ion-row>
         </ion-item>
 
         <ion-item lines="none">
-            <ion-label position="stacked">Nationality</ion-label>
+            <ion-label position="stacked" color="dark">Nationality</ion-label>
             <ion-input
                 type="text"
                 formControlName="nationality"
@@ -87,19 +97,13 @@
         </ion-item>
     </div>
 
-    <ion-button expand="full" color="dark" size="large" class="mb-25">
+    <ion-button
+        type="submit"
+        expand="full"
+        color="dark"
+        size="large"
+        class="mb-25"
+    >
         Continue
     </ion-button>
-
-    <ion-item lines="none">
-        <ion-icon
-            name="shield-checkmark"
-            color="success"
-            slot="start"
-        ></ion-icon>
-        <ion-label>
-            Inyova guarantees highest investment standards.<br />
-            <a>Learn more.</a>
-        </ion-label>
-    </ion-item>
 </form>

@@ -17,3 +17,8 @@
 .mb-25 {
     margin-bottom: 25px;
 }
+
+// Validations
+.ion-invalid.ion-touched ion-label {
+    color: #ee3c16 !important;
+}

@@ -18,10 +18,22 @@
 
     <ion-content class="ion-padding inyova-background">
         <ion-row class="ion-justify-content-center">
-            <ion-col sizeXs="12" sizeSm="10" sizeMd="5" sizeLg="3">
+            <ion-col sizeXs="12" sizeSm="10" sizeMd="6" sizeLg="5" sizeXl="4">
                 <h1>Personal details</h1>
 
                 <app-personal-details-form></app-personal-details-form>
+
+                <ion-item lines="none">
+                    <ion-icon
+                        name="shield-checkmark"
+                        color="success"
+                        slot="start"
+                    ></ion-icon>
+                    <ion-label>
+                        Inyova guarantees highest investment standards.<br />
+                        <a>Learn more.</a>
+                    </ion-label>
+                </ion-item>
             </ion-col>
         </ion-row>
     </ion-content>
